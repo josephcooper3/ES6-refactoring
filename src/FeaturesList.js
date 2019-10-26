@@ -1,5 +1,5 @@
-const React = require('react')
-require('./FeaturesList.css');
+import React from 'react'
+import './FeaturesList.css';
 
 const FeaturesList = (props) => {
 
@@ -27,4 +27,4 @@ const FeaturesList = (props) => {
 
 }
 
-module.exports = FeaturesList
+export { FeaturesList as default }
