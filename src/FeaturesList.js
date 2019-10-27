@@ -4,15 +4,16 @@ import './FeaturesList.css';
 const FeaturesList = (props) => {
 
   const features = props.features.map((feature, index) => {
+    const {name, description, MDNLink, isImplemented, implementations} = feature;
     return (
     <ul key={index}>
       <li>
-        <h3>{feature.name}</h3>
-        <p>{feature.description}</p>
-        <a href={feature.MDNLink}>📖Documentation</a>
-        <h5>Implemented? {feature.isImplemented ? "✅": "❌"}</h5>
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <a href={MDNLink}>📖Documentation</a>
+        <h5>Implemented? {isImplemented ? "✅": "❌"}</h5>
         <p>Possible Implementations:</p> 
-        <p><code>{feature.implementations}</code></p>
+        <p><code>{implementations}</code></p>
       </li>
     </ul>
     )
