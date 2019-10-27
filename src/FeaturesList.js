@@ -1,9 +1,9 @@
 import React from 'react'
 import './FeaturesList.css';
 
-const FeaturesList = (props) => {
+const FeaturesList = ({features}) => {
 
-  const features = props.features.map((feature, index) => {
+  const allFeatures = features.map((feature, index) => {
     const {name, description, MDNLink, isImplemented, implementations} = feature;
     return (
     <ul key={index}>
@@ -21,7 +21,7 @@ const FeaturesList = (props) => {
 
   return (
   <div>
-    {features}
+    {allFeatures}
   </div>
   )
 
